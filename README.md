@@ -72,3 +72,12 @@ http://localhost:3000
 
 ---
 
+## 📂 Navegação no DashGo
+
+- Listar usuários: abra no navegador `http://localhost:3000/users`  
+- Criar novo usuário: abra `http://localhost:3000/users/create`  
+- Ver detalhes de um usuário: abra `http://localhost:3000/users/[id]` (substitua `[id]` pelo ID do usuário)
+
+---
+
+
