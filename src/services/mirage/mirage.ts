@@ -28,13 +28,13 @@ export function makeServer() {
           return faker.internet.email().toLocaleLowerCase();
         },
         createdAt() {
-          return faker.date.recent({ days: 10 }).toISOString(); // Corrigido
+          return faker.date.recent({ days: 10 }).toISOString(); 
         },
       })
     },
     
     seeds(server) {
-      server.createList('user', 200); // Mais dados para testar paginação
+      server.createList('user', 200); 
     },
     
     routes() {
