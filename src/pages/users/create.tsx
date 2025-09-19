@@ -9,18 +9,13 @@ import {
   HStack,
   SimpleGrid,
   VStack,
-  useToast,
 } from "@chakra-ui/react";
 import { Input } from "@/components/Form/Input";
 import NextLink from "next/link";
-import { useMutation } from "react-query";
 
 import { SubmitHandler, useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { api } from "@/services/api";
-import { queryClient } from "@/services/queryClient";
-import { useRouter } from "next/router";
 
 type CreateUserFormData = {
   name: string;
@@ -46,25 +41,6 @@ const createUserFormSchema = yup.object().shape({
 });
 
 export default function UserCreate() {
-  const router = useRouter()
-
-  const createUserMutation = useMutation(async (user: CreateUserFormData) => {
-    const response = await api.post("users", {
-      user: {
-        name: user.name,
-        email: user.email,
-        password: user.password,
-        password_confirmation: user.password_confirmation,
-      },
-    });
-
-    return response.data.user;
-  }, {
-    onSuccess: () => {
-      queryClient.invalidateQueries('users')
-    }
-  });
-
   const {
     register,
     handleSubmit,
@@ -73,12 +49,10 @@ export default function UserCreate() {
     resolver: yupResolver(createUserFormSchema),
   });
 
+  // Placeholder: apenas previne submit
   const handleCreateUser: SubmitHandler<CreateUserFormData> = async (values) => {
-    await createUserMutation.mutateAsync(values);
-    router.push('/users');
+    alert("Formulário enviado (placeholder): " + JSON.stringify(values, null, 2));
   };
-
-  
 
   return (
     <Box>
@@ -141,7 +115,8 @@ export default function UserCreate() {
 
           <Flex mt="8" justify="flex-end">
             <HStack spacing="4">
-              <NextLink href="/users" passHref>
+              {/* Link placeholder para não gerar 404 */}
+              <NextLink href="#" passHref>
                 <Button as="a" variant="outline" colorScheme="whiteAlpha">
                   Cancelar
                 </Button>
