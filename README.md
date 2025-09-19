@@ -1,4 +1,4 @@
-DashGo
+DASHGO
 
 DashGo é um painel administrativo web que permite gerenciar usuários, visualizar informações em dashboards e navegar por diferentes seções de forma organizada e moderna.
 
@@ -68,4 +68,3 @@ http://localhost:3000
 📄 Licença
 
 Este projeto está licenciado sob a MIT License
-.
