@@ -49,7 +49,7 @@ export default function UserCreate() {
     resolver: yupResolver(createUserFormSchema),
   });
 
-  // Placeholder: apenas previne submit
+  
   const handleCreateUser: SubmitHandler<CreateUserFormData> = async (values) => {
     alert("Formulário enviado (placeholder): " + JSON.stringify(values, null, 2));
   };
@@ -115,7 +115,6 @@ export default function UserCreate() {
 
           <Flex mt="8" justify="flex-end">
             <HStack spacing="4">
-              {/* Link placeholder para não gerar 404 */}
               <NextLink href="#" passHref>
                 <Button as="a" variant="outline" colorScheme="whiteAlpha">
                   Cancelar
