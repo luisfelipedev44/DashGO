@@ -1,55 +1,71 @@
 DashGo
 
-DashGo é um painel administrativo desenvolvido com Next.js, Chakra UI e React Query, projetado para gerenciar usuários de forma eficiente e moderna. A aplicação utiliza MirageJS para simular uma API RESTful, permitindo o desenvolvimento sem a necessidade de um backend real.
+DashGo é um painel administrativo web que permite gerenciar usuários, visualizar informações em dashboards e navegar por diferentes seções de forma organizada e moderna.
 
 🚀 Tecnologias Utilizadas
 
-Next.js: Framework React para renderização do lado do servidor (SSR) e geração de sites estáticos (SSG).
+Next.js
 
-Chakra UI: Biblioteca de componentes React acessíveis e personalizáveis.
+ReactJS
 
-React Query: Biblioteca para gerenciamento de estado e cache de dados assíncronos.
+TypeScript
 
-MirageJS: Simula uma API RESTful para desenvolvimento sem backend real.
+Chakra UI
 
-TypeScript: Superset do JavaScript que adiciona tipagem estática.
+React Query
 
-📦 Funcionalidades
+MirageJS (mock de API)
 
-CRUD de Usuários: Criação, leitura, atualização e exclusão de usuários.
+💻 Funcionalidades
 
-Dashboard Interativo: Visualização de gráficos representando o volume de usuários cadastrados.
+Listagem de usuários com paginação
 
-Autenticação com GitHub: Login utilizando autenticação do GitHub.
+Criação de novos usuários (formulário)
 
-Responsividade: Interface adaptável a diferentes tamanhos de tela, utilizando Chakra UI.
+Detalhes de cada usuário
 
-🔧 Instalação e Execução
+Dashboard interativo e responsivo
 
-Clone o repositório:
+Navegação completa com Header e Sidebar
+
+📦 Como Executar o Projeto
+Pré-requisitos
+
+Node.js instalado na sua máquina
+
+Yarn ou npm para gerenciar pacotes
+
+Passos
+
+Clone o repositório
 
 git clone https://github.com/luisfelipedev44/DashGo.git
 
 
-Navegue até o diretório do projeto:
+Acesse o diretório do projeto
 
 cd DashGo
 
 
-Instale as dependências:
+Instale as dependências
 
 npm install
+# ou
+yarn
 
 
-Inicie o servidor de desenvolvimento:
+Inicie o servidor de desenvolvimento
 
 npm run dev
+# ou
+yarn dev
 
 
-Acesse a aplicação no navegador:
+Abra o navegador e acesse
 
 http://localhost:3000
 
 📄 Licença
 
 Este projeto está licenciado sob a MIT License
+.
